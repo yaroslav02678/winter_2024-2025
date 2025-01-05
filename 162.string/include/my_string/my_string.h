@@ -1,7 +1,7 @@
 #ifndef MY_STRING_H
 #define MY_STRING_H
 
-#include "../libstdc++/include.cpp"
+#include "../../lib/libstdc++/include.cpp"
 
 class MyString{
     vector<char> str;
@@ -12,8 +12,8 @@ public:
     MyString(const MyString& other);
     ~MyString();
 
-    char operator[](size_t index) const; 
-    char operator[](size_t index);
+    const char& operator[](size_t index) const; 
+    char& operator[](size_t index);
 
     size_t size() const;
     void clear();
@@ -26,7 +26,6 @@ public:
     bool operator==(const MyString& other);
     bool operator!=(const MyString& other);
 
-    
 };
 
 #endif // MY_STRING_H
