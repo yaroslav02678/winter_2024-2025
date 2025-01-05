@@ -1,9 +1,25 @@
 cmake_minimum_required(VERSION 3.30)
 
-project(TestProgram)
-
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+project(StringProgram)
+
+add_executable(StringProgram 
+  src/main.cpp
+
+  include/my_string/my_string.h
+  include/interface/interface.h
+  src/my_string/my_string.cpp
+  lib/libstdc++/include.cpp
+)
+
+target_link_libraries(TestProgram 
+  include/my_string/my_string.h
+  include/interface/interface.h
+)
+
+project(TestProgram)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -15,7 +31,7 @@ FetchContent_MakeAvailable(gtest)
 
 add_executable(TestProgram 
   tests/tests.cpp
-  
+
   include/my_string/my_string.h
   src/my_string/my_string.cpp
   lib/libstdc++/include.cpp
@@ -27,4 +43,5 @@ target_link_libraries(TestProgram
 
 enable_testing()
 add_test(NAME MyTest COMMAND TestProgram)
+
 

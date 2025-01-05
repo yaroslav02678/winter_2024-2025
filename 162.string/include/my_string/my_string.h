@@ -23,7 +23,7 @@ public:
     MyString& operator=(const MyString& other);
     MyString operator+(const MyString& other);
 
-    bool operator==(const MyString& other);
+    bool operator==(const MyString& other) const;
     bool operator!=(const MyString& other);
 
 };

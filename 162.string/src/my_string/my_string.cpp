@@ -69,7 +69,7 @@ MyString MyString::operator+(const MyString& other) {
     return new_str;
 }
 
-bool MyString::operator==(const MyString& other) {
+bool MyString::operator==(const MyString& other) const {
     if (size() != other.size()) {
         return false;
     }
