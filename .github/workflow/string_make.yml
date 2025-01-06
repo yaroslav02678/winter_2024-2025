@@ -3,7 +3,7 @@ name: Build Project
 on:
   push:
     branches:
-      - 'work_branch_my_string'  
+      - 'work_branch'  
 
 jobs:
   build:
