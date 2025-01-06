@@ -20,11 +20,6 @@ jobs:
           cd build
           cmake ..
           cmake --build .
-
-      - name: Run T
-        run: |
-          cd 162.string/build/Debug
-          ./StringProgram.exe
           
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
