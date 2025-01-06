@@ -10,6 +10,9 @@ The project is divided into two parts:
 - Unit testing with Google Test.
 - Modern C++ standards (C++17) support.
 
+## interface
+<img src='/162.string/image/image.png'>
+
 ## Build the project:
 ```
 cd 162.string 
