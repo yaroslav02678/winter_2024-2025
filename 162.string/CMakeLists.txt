@@ -7,16 +7,13 @@ project(StringProgram)
 
 add_executable(StringProgram 
   src/main.cpp
-
-  include/my_string/my_string.h
-  include/interface/interface.h
   src/my_string/my_string.cpp
+  src/interface/interface.cpp
   lib/libstdc++/include.cpp
 )
 
-target_link_libraries(TestProgram 
-  include/my_string/my_string.h
-  include/interface/interface.h
+target_link_libraries(StringProgram  
+  ${CMAKE_SOURCE_DIR}/include
 )
 
 project(TestProgram)

@@ -1,0 +1,34 @@
+name: Build Project
+
+on:
+  push:
+    branches:
+      - 'work_branch_my_string'  
+
+jobs:
+  build:
+    runs-on: windows-latest 
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2  
+
+      - name: Build Project
+        run: |
+          cd 162.string
+          mkdir build
+          cd build
+          cmake ..
+          cmake --build .
+
+      - name: Run T
+        run: |
+          cd 162.string/build/Debug
+          ./StringProgram.exe
+          
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: 162.string/build/Debug/StringProgram.exe
+      
