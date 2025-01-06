@@ -1,4 +1,4 @@
-# StringProgram
+### StringProgram
 
 **StringProgram** is a project that demonstrates string manipulation and functionality testing.  
 The project is divided into two parts:
@@ -21,3 +21,4 @@ cd build
 cmake ..
 cmake --build .
 ```
+
